@@ -68,17 +68,13 @@ Hey, i hope you doing well. And oh,u dont need to reply me if u dont want to. So
 Ps: That day when i say i love you, i mean it.
 </div>
 
-<audio autoplay loop muted id="audio">
-<source src="_Laskar Pelangi_ _ TRUST (Trinity Youth Symphony Orchestra).mp3" type="audio/mpeg">
+<audio id="audio" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-window.addEventListener('click', function () {
-  const audio = document.getElementById('audio');
-  audio.muted = false;
-  audio.play();
-});
+document.addEventListener("click", function () {
+  const audio = document.getElementById("audio");
+  audio.play().catch(() => {});
+}, { once: true });
 </script>
-
-</body>
-</html>
